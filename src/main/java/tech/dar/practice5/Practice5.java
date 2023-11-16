@@ -83,15 +83,18 @@ public class Practice5 {
 
     // Написать метод getDaysInMonth, который принимает два параметра: month и year (месяц и год) и возвращает количество дней в этом месяце, учитывая високосные годы.
     public static int getDaysInMonth(int month, int year) {
-        boolean isLeapYear = year % 4 == 0;
         int days = 0;
         if ((month < 8 && month % 2 == 1) || (month >= 8 && month % 2 == 0))
             days = 31;
         else if (month == 2)
-            days = isLeapYear ? 29 : 28;
+            days = isLeapYear(year) ? 29 : 28;
         else
             days = 30;
         return days;
+    }
+
+    public static boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 
     // Написать метод calculateDistance, который принимает координаты двух точек (x1, y1) и (x2, y2) на плоскости и возвращает расстояние между ними.
