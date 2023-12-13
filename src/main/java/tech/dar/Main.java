@@ -1,4 +1,4 @@
-package tech.dar.practice9;
+package tech.dar;
 
 public class Main {
     public static void main(String[] args) {
