@@ -1,0 +1,17 @@
+
+server:
+  port: 8080
+
+spring:
+  jpa.hibernate.ddl-auto: update
+  jpa.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  jpa.properties.hibernate.globally_quoted_identifiers: true
+  jpa.show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_java_course?useUnicode=yes&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: root
+    initialization-mode: never
+    driverClassName: com.mysql.cj.jdbc.Driver
+#  flyway:
+#    enabled: false
