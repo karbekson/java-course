@@ -10,5 +10,6 @@ import lombok.Setter;
 public class BookGetFilter {
 
     private String title;
+    private String authorName;
 
 }

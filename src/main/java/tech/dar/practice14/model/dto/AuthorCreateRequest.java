@@ -6,16 +6,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @AllArgsConstructor
 @Getter
 @Setter
-public class BookCreateRequest {
+public class AuthorCreateRequest {
 
     @NotBlank
-    private String title;
+    private String name;
     @NotNull
-    private String description;
-
-    private String authorName;
+    private LocalDate birthDate;
 
 }
