@@ -15,8 +15,15 @@ public class AuthorController {
     private final AuthorService authorService;
 
     @GetMapping
-    public List<Author> getAllBooks() {
+    public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();
+    }
+
+    @PostMapping
+    public Author createAuthor(
+            @RequestParam("name") String name
+    ) {
+        return authorService.getOrCreateAuthor(name);
     }
 
 }

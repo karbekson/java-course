@@ -4,10 +4,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import tech.dar.practice14.model.dto.AuthorCreateRequest;
 import tech.dar.practice14.model.entity.Author;
-import tech.dar.practice14.repository.AuthorRepository;
+import tech.dar.practice14.repository.mongo.AuthorRepository;
+//import tech.dar.practice14.repository.AuthorRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
@@ -26,6 +28,7 @@ public class AuthorService {
             return optional.get();
         } else {
             Author author = new Author();
+            author.setId(UUID.randomUUID().toString());
             author.setName(name);
 //            author.setBirthDate(request.getBirthDate());
             return authorRepo.save(author);

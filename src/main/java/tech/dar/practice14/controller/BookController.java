@@ -24,34 +24,34 @@ public class BookController {
     ) {
         return bookService.getAllBooks(filter);
     }
-
-    @PostMapping
-    public Book createBook(
-            @RequestBody @Valid BookCreateRequest request
-    ) {
-        return bookService.createBook(request);
-    }
-
-    @GetMapping("{id}")
-    public Book getBook(
-            @PathVariable Long id
-    ) {
-        return bookService.getBook(id);
-    }
-
-    @PutMapping("{id}")
-    public Book updateBook(
-            @PathVariable Long id,
-            @RequestBody @Valid BookUpdateRequest request
-    ) {
-        return bookService.updateBook(id, request);
-    }
-
-    @DeleteMapping("{id}")
-    public void deleteBook(
-            @PathVariable Long id
-    ) {
-        bookService.deleteBook(id);
-    }
+//
+//    @PostMapping
+//    public Book createBook(
+//            @RequestBody @Valid BookCreateRequest request
+//    ) {
+//        return bookService.createBook(request);
+//    }
+//
+//    @GetMapping("{id}")
+//    public Book getBook(
+//            @PathVariable Long id
+//    ) {
+//        return bookService.getBook(id);
+//    }
+//
+//    @PutMapping("{id}")
+//    public Book updateBook(
+//            @PathVariable Long id,
+//            @RequestBody @Valid BookUpdateRequest request
+//    ) {
+//        return bookService.updateBook(id, request);
+//    }
+//
+//    @DeleteMapping("{id}")
+//    public void deleteBook(
+//            @PathVariable Long id
+//    ) {
+//        bookService.deleteBook(id);
+//    }
 
 }
